@@ -1,4 +1,4 @@
-# AgeMap
-Colorado State Demography Office Age WebMap
+# JobSectorMap
+Colorado State Demography Office Job Sector WebMap
 
-A map to show changes in age groups in Colorado by county and year
+A map to show jobs by sector in Colorado by county
