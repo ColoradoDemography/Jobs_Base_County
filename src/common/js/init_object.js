@@ -189,6 +189,47 @@ module.exports = function() {
             }
         }
         
+        this.getMaxPctJobs = function() {
+            var max_value = -Infinity;
+                for (let i = 0; i < fips_array.length; i++) {
+                    var current_county = parseFloat(this.retrievePctJobs(fips_array[i]));
+                    if (current_county > max_value) {
+                        max_value = current_county;
+                    }
+                }
+                return max_value;
+        }
+        
+        this.getMinPctJobs = function() {
+            var min_value = Infinity;
+                for (let i = 0; i < fips_array.length; i++) {
+                    var current_county = parseFloat(this.retrievePctJobs(fips_array[i]));
+                    if (current_county < min_value) {
+                        min_value = current_county;
+                    }
+                }
+                return min_value;
+        }
+        
+        this.getMedianPctJobs = function() {
+            var values = [];
+            for (let i = 0; i < fips_array.length; i++) {
+                var current_county = parseFloat(this.retrievePctJobs(fips_array[i]));
+                values.push(current_county);
+            }
+
+            values.sort(function(a, b) {
+                return a - b;
+            });
+
+            var half = Math.floor(values.length / 2);
+            if (values.length % 2)
+                return values[half];
+            else
+                return (values[half - 1] + values[half]) / 2.0;
+        }
+
+        
         this.getMaxPctChange = function() {
             var max_value = -Infinity;
             for (let i = 0; i < fips_array.length; i++) {

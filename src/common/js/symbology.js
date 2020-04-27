@@ -34,22 +34,24 @@ module.exports = function(geolayer, cMap, num) {
         breaks = [(min + spreadl * (2 / 5)), (min + spreadl * (3 / 5)), (min + spreadl * (4 / 5)), (min + spreadl * (9 / 10)), median, (median + spreadh * (1 / 12)), (median + spreadh * (1 / 6)), (median + spreadh * (2 / 6)), (median + spreadh * (3 / 6)), (median + spreadh * (4 / 6))];
     }
     
-     if (num === "4") {
+    /*if (num === "4") {
          max = cMap.getMaxPctPop();
          min = cMap.getMinPctPop();
          breaks = [min * 0.5, min * 0.35, min * 0.2, min * 0.1, 0, max * 0.1, max * 0.2, max * 0.35, max * 0.5, max * 0.75];
-         /*if (min > 0) {
+         if (min > 0) {
              min = -max;
-         }*/
-     }
-    /*if (num === "4") {
-        max = cMap.getMaxAvgPopChg();
-        min = cMap.getMinAvgPopChg();
-        breaks = [-2000, -1000, -500, -200, 0, 200, 500, 2000, 5000, 10000];
-        if (min > 0) {
-            min = -max;
-        }
+         }
     }*/
+     
+    if (num === "4") {
+        max = cMap.getMaxPctJobs();
+        min = cMap.getMinPctJobs();
+        median = cMap.getMedianPctJobs();
+        spreadl = median - min;
+        spreadh = max - median;
+        breaks = [(min + spreadl * (2 / 5)), (min + spreadl * (3 / 5)), (min + spreadl * (4 / 5)), (min + spreadl * (9 / 10)), median, (median + spreadh * (1 / 12)), (median + spreadh * (1 / 6)), (median + spreadh * (2 / 6)), (median + spreadh * (3 / 6)), (median + spreadh * (4 / 6))];
+    }
+    
     if (num === "5") {
         max = cMap.getMaxBirthRate();
         min = cMap.getMinBirthRate();
