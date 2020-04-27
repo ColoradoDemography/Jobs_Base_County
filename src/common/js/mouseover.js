@@ -30,9 +30,9 @@ module.exports = function(e, worker_data) {
             }) + " %";
         }
         if (stat === "4") {
-            result_value = cMap.retrievePctPop(fips).toLocaleString(undefined, {
+            result_value = cMap.retrievePctJobs(fips).toLocaleString(undefined, {
                 maximumFractionDigits: 0
-            });
+            }) + " %";
         }
         if (stat === "3") {
             result_value = parseFloat(cMap.retrieveTtlPop(fips)).toLocaleString(undefined, {

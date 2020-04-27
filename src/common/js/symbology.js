@@ -38,9 +38,9 @@ module.exports = function(geolayer, cMap, num) {
          max = cMap.getMaxPctPop();
          min = cMap.getMinPctPop();
          breaks = [min * 0.5, min * 0.35, min * 0.2, min * 0.1, 0, max * 0.1, max * 0.2, max * 0.35, max * 0.5, max * 0.75];
-         if (min > 0) {
+         /*if (min > 0) {
              min = -max;
-         }
+         }*/
      }
     /*if (num === "4") {
         max = cMap.getMaxAvgPopChg();
@@ -127,7 +127,7 @@ module.exports = function(geolayer, cMap, num) {
             value = cMap.retrieveTtlPop(fips);
         }
         if (num === "4") {
-            value = cMap.retrievePctPop(fips);
+            value = cMap.retrievePctJobs(fips);
         }
         //if (num === "4") {
             //value = cMap.retrieveAvgPopChg(fips);

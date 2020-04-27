@@ -52,7 +52,8 @@ module.exports = function() {
         this.retrieveCountyPop = function(fips, year) {
             var agepop = 0;
             for (let i = 0; i < data.length; i++) {
-                if (data[i].area_code === fips && data[i].population_year === year) {
+                if (data[i].area_code === fips && data[i].population_year === year && data[i].sector_id !== "0") {
+                    console.log(data[i].sector);
                     agepop = agepop + parseInt(data[i].total_jobs);
                 }
             }
@@ -60,14 +61,14 @@ module.exports = function() {
         }
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //just do 0 to number of age categories
-        this.retrieveTtlCountyPop = function(fips, year) {
-            var allpop = 0;
+        this.retrieveTtlJobs = function(fips, year) {
+            var alljobs = 0;
             for (let i = 0; i < data.length; i++) {
-                if (data[i].area_code === fips && data[i].population_year === year) {
-                    allpop = allpop + parseInt(data[i].total_jobs);
+                if (data[i].area_code === fips && data[i].population_year === year && data[i].sector_id === "0") {
+                    alljobs = alljobs + parseInt(data[i].total_jobs);
                 }
             }
-            return allpop;
+            return alljobs;
         }
 
         this.retrieveTtlPopChg = function(fips) {
@@ -179,10 +180,10 @@ module.exports = function() {
             }
         }
 
-        this.retrievePctPop = function(fips) {
-            var pctpopchg = ((this.retrieveTtlPop(fips) / this.retrieveTtlCountyPop(fips, first_year)) * 100).toFixed(2);
-            if (isFinite(pctpopchg)) {
-                return pctpopchg;
+        this.retrievePctJobs = function(fips) {
+            var pctjobs = ((this.retrieveTtlPop(fips) / this.retrieveTtlJobs(fips, first_year)) * 100).toFixed(2);
+            if (isFinite(pctjobs)) {
+                return pctjobs;
             } else {
                 return 0;
             }
@@ -246,25 +247,27 @@ module.exports = function() {
         this.getMaxPctPop = function() {
             var max_value = -Infinity;
             for (let i = 0; i < fips_array.length; i++) {
-                var current_county = this.retrieveCountyPop(fips_array[i], first_year);
+                var current_county = (this.retrieveCountyPop(fips_array[i], first_year)/this.retrieveTtlJobs(fips_array[i], first_year));
                 if (current_county > max_value) {
                     max_value = current_county;
                 }
             }
-            return max_value;
+            var max_pct = (max_value * 100).toFixed(2);
+            return max_pct;
         }
 
         this.getMinPctPop = function() {
             var min_value = Infinity;
             for (let i = 0; i < fips_array.length; i++) {
-                var current_county = this.retrieveCountyPop(fips_array[i], first_year);
+                var current_county = (this.retrieveCountyPop(fips_array[i], first_year)/this.retrieveTtlJobs(fips_array[i], first_year));
                 if (current_county < min_value) {
                     min_value = current_county;
                 }
             }
-            return min_value;
+            var min_pct = (min_value * 100).toFixed(2);
+            return min_pct;
         }
-
+        
      }
 
     return CMap; // return constructor function

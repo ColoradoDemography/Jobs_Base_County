@@ -5,7 +5,8 @@ module.exports = function(main_data, sector_string, years_string, callback) {
     //console.log("Sectors");
     //console.log(sector_string);
     var sector_array = sector_string.split(",");
-    //console.log(ages_array);
+    sector_array.push("0");
+    //console.log(sector_array);
     
     //create array from years_string
     //console.log("Years");

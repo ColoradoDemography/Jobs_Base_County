@@ -48,7 +48,7 @@ module.exports = function() {
     if (sector_string === "") {
         sector_string = "1000";
     }
-    console.log(sector_string, yearset, stat_val);
+    //console.log(sector_string, yearset, stat_val);
     return [sector_string, yearset, stat_val]
 
 }

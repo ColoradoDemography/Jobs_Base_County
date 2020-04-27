@@ -56,8 +56,8 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
     document.getElementById("stat").addEventListener("change", function() {
         refreshdata(layer, main_data);
         //hide second year option if viewing single year
-        var stat_element = document.getElementById("stat");
-        console.log(stat_element.options[stat_element.selectedIndex].value);
+        //var stat_element = document.getElementById("stat");
+        //console.log(stat_element.options[stat_element.selectedIndex].value);
         /*if (stat_element.options[stat_element.selectedIndex].value === '3') {
             $("span:first").text("Year:");
             $("to:first").text("");
@@ -74,7 +74,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
             $("#selto").show();
             //selto_element.style.display = "block";
         }*/
-        console.log(main_data);
+        //console.log(main_data);
     }, false);
 
   /*  document.getElementById("selfrom").addEventListener("change", function() {
@@ -89,7 +89,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
     
     document.getElementById("jobsectors").addEventListener("change", function() {
         refreshdata(layer, main_data);
-        console.log(main_data);
+        //console.log(main_data);
     }, false);
     
 
