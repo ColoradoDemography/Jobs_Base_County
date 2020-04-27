@@ -23,8 +23,8 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
         var div = L.DomUtil.create('div', 'command bord');
         div.innerHTML = 
             "Statistic:<br /><select id='stat'><option value='3'>Total Jobs</option><option value='4'>Percent of Jobs</option></select><br />" +
-            "Select Job Sectors:<br /><select multiple size='17' id='jobsectors'>" +
-                "<option value='1000'>Agriculture</option>" + 
+            "Select Job Sectors:<br /><select multiple size='20' id='jobsectors'>" +
+                "<option value='1000' selected>Agriculture</option>" + 
                 "<option value='2000'>Mining</option>" +
                 "<option value='3000'>Utilities</option>" +
                 "<option value='4000'>Construction</option>" +
@@ -36,9 +36,12 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
                 "<option value='10000'>Finance Activities</option>" +
                 "<option value='10150'>Real Estate</option>" +
                 "<option value='11000'>Professional & Business Services</option>" +
+                "<option value='11025'>Management of Companies</option>" +
+                "<option value='11050'>Admin & Waste Management</option>" +
                 "<option value='12000'>Education</option>" +
                 "<option value='12015'>Health Services</option>" +
                 "<option value='13000'>Arts</option>" +
+                "<option value='13015'>Accommodation & Food Services</option>" +
                 "<option value='14000'>Other Services Except Public Administration</option>" +
                 "<option value='15000'>Government</option>" +
             "</select>";
