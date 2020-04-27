@@ -9,11 +9,11 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
         position: 'topleft'
     });
     //var ages_data = worker_data[2];
-    var yrs_data = worker_data[1];
+    //var yrs_data = worker_data[1];
 
     var main_data = worker_data[0];
 
-    var queriedYears: string = "";
+    //var queriedYears: string = "";
 
     /*for (let i = 0; i < yrs_data.length; i++) {
         queriedYears += "<option style='color:" + ((yrs_data[i].datatype === "Estimate") ? "black" : "red") + "' value='" + yrs_data[i].year + "'>" + yrs_data[i].year + "</option>";
@@ -144,8 +144,33 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
             document.getElementsByClassName('leaflet-top leaflet-right')[0].style.display = 'none';
 
             let title_h2 = document.querySelector('.title h2');
+        
+            //Change sector codes to names
+            var titlestring = new Array();
+            for (var j = 0; j < querystring.length; j++){
+                if (querystring[j] == "1000"){titlestring.push("Agriculture")}
+                if (querystring[j] == "2000"){titlestring.push("Mining")}
+                if (querystring[j] == "3000"){titlestring.push("Utilities")}
+                if (querystring[j] == "4000"){titlestring.push("Construction")}
+                if (querystring[j] == "5000"){titlestring.push("Manufacturing")}
+                if (querystring[j] == "6000"){titlestring.push("Wholesale Trade")}
+                if (querystring[j] == "7000"){titlestring.push("Retail Trade")}
+                if (querystring[j] == "8000"){titlestring.push("Transportation & Warehousing")}
+                if (querystring[j] == "9000"){titlestring.push("Information")}
+                if (querystring[j] == "10000"){titlestring.push("Finance Activities")}
+                if (querystring[j] == "10150"){titlestring.push("Real Estate")}
+                if (querystring[j] == "11000"){titlestring.push("Professional & Business Services")}
+                if (querystring[j] == "11025"){titlestring.push("Management of Companies")}
+                if (querystring[j] == "11050"){titlestring.push("Admin & Waste Management")}
+                if (querystring[j] == "12000"){titlestring.push("Education")}
+                if (querystring[j] == "12015"){titlestring.push("Health Services")}
+                if (querystring[j] == "13000"){titlestring.push("Arts")}
+                if (querystring[j] == "13015"){titlestring.push("Accommodation & Food Services")}
+                if (querystring[j] == "14000"){titlestring.push("Other Services Except Public Administration")}
+                if (querystring[j] == "15000"){titlestring.push("Government")}
+            }
 
-            title_h2.innerHTML = "Sectors: " + ":&nbsp;&nbsp;" + querystring.sector;
+            title_h2.innerHTML = "Sectors " + ":&nbsp;&nbsp;" + titlestring.sector;
                         
             refreshdata(layer, main_data);
         } else {
