@@ -139,26 +139,6 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
                     if (h.indexOf(sectorselector[k].value) != -1){
                         sectorselector[k].setAttribute('selected', 'selected');
                     }
-                    if (querystring.sector[h] == "1000"){titlestring.push("Agriculture")}
-                    if (querystring.sector[h] == "2000"){titlestring.push("Mining")}
-                    if (querystring.sector[h] == "3000"){titlestring.push("Utilities")}
-                    if (querystring.sector[h] == "4000"){titlestring.push("Construction")}
-                    if (querystring.sector[h] == "5000"){titlestring.push("Manufacturing")}
-                    if (querystring.sector[h] == "6000"){titlestring.push("Wholesale Trade")}
-                    if (querystring.sector[h] == "7000"){titlestring.push("Retail Trade")}
-                    if (querystring.sector[h] == "8000"){titlestring.push("Transportation & Warehousing")}
-                    if (querystring.sector[h] == "9000"){titlestring.push("Information")}
-                    if (querystring.sector[h] == "10000"){titlestring.push("Finance Activities")}
-                    if (querystring.sector[h] == "10150"){titlestring.push("Real Estate")}
-                    if (querystring.sector[h] == "11000"){titlestring.push("Professional & Business Services")}
-                    if (querystring.sector[h] == "11025"){titlestring.push("Management of Companies")}
-                    if (querystring.sector[h] == "11050"){titlestring.push("Admin & Waste Management")}
-                    if (querystring.sector[h] == "12000"){titlestring.push("Education")}
-                    if (querystring.sector[h] == "12015"){titlestring.push("Health Services")}
-                    if (querystring.sector[h] == "13000"){titlestring.push("Arts")}
-                    if (querystring.sector[h] == "13015"){titlestring.push("Accommodation & Food Services")}
-                    if (querystring.sector[h] == "14000"){titlestring.push("Other Services Except Public Administration")}
-                    if (querystring.sector[h] == "15000"){titlestring.push("Government")}
                 }
             });
             document.getElementsByClassName('command')[0].style.display = 'none';
@@ -168,30 +148,31 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
         
             //Change sector codes to names
 
-            /*for (var j = 0; j < querystring.length; j++){console.log(querystring[j]);
-                if (querystring[j] == "1000"){titlestring.push("Agriculture")}
-                if (querystring[j] == "2000"){titlestring.push("Mining")}
-                if (querystring[j] == "3000"){titlestring.push("Utilities")}
-                if (querystring[j] == "4000"){titlestring.push("Construction")}
-                if (querystring[j] == "5000"){titlestring.push("Manufacturing")}
-                if (querystring[j] == "6000"){titlestring.push("Wholesale Trade")}
-                if (querystring[j] == "7000"){titlestring.push("Retail Trade")}
-                if (querystring[j] == "8000"){titlestring.push("Transportation & Warehousing")}
-                if (querystring[j] == "9000"){titlestring.push("Information")}
-                if (querystring[j] == "10000"){titlestring.push("Finance Activities")}
-                if (querystring[j] == "10150"){titlestring.push("Real Estate")}
-                if (querystring[j] == "11000"){titlestring.push("Professional & Business Services")}
-                if (querystring[j] == "11025"){titlestring.push("Management of Companies")}
-                if (querystring[j] == "11050"){titlestring.push("Admin & Waste Management")}
-                if (querystring[j] == "12000"){titlestring.push("Education")}
-                if (querystring[j] == "12015"){titlestring.push("Health Services")}
-                if (querystring[j] == "13000"){titlestring.push("Arts")}
-                if (querystring[j] == "13015"){titlestring.push("Accommodation & Food Services")}
-                if (querystring[j] == "14000"){titlestring.push("Other Services Except Public Administration")}
-                if (querystring[j] == "15000"){titlestring.push("Government")}
+            for (var j = 0; j < querystring.length; j++){console.log(querystring[j]);
+                if (querystring.sector[j] == "1000"){titlestring.push("Agriculture")}
+                if (querystring.sector[j] == "2000"){titlestring.push("Mining")}
+                if (querystring.sector[j] == "3000"){titlestring.push("Utilities")}
+                if (querystring.sector[j] == "4000"){titlestring.push("Construction")}
+                if (querystring.sector[j] == "5000"){titlestring.push("Manufacturing")}
+                if (querystring.sector[j] == "6000"){titlestring.push("Wholesale Trade")}
+                if (querystring.sector[j] == "7000"){titlestring.push("Retail Trade")}
+                if (querystring.sector[j] == "8000"){titlestring.push("Transportation & Warehousing")}
+                if (querystring.sector[j] == "9000"){titlestring.push("Information")}
+                if (querystring.sector[j] == "10000"){titlestring.push("Finance Activities")}
+                if (querystring.sector[j] == "10150"){titlestring.push("Real Estate")}
+                if (querystring.sector[j] == "11000"){titlestring.push("Professional & Business Services")}
+                if (querystring.sector[j] == "11025"){titlestring.push("Management of Companies")}
+                if (querystring.sector[j] == "11050"){titlestring.push("Admin & Waste Management")}
+                if (querystring.sector[j] == "12000"){titlestring.push("Education")}
+                if (querystring.sector[j] == "12015"){titlestring.push("Health Services")}
+                if (querystring.sector[j] == "13000"){titlestring.push("Arts")}
+                if (querystring.sector[j] == "13015"){titlestring.push("Accommodation & Food Services")}
+                if (querystring.sector[j] == "14000"){titlestring.push("Other Services Except Public Administration")}
+                if (querystring.sector[j] == "15000"){titlestring.push("Government")}
             }
-*/
-            title_h2.innerHTML = "Sectors " + ":&nbsp;&nbsp;" + titlestring.sector;
+            var x = titlestring.toString();    
+        
+            title_h2.innerHTML = "Sectors " + ":&nbsp;&nbsp;" + x;
                         
             refreshdata(layer, main_data);
         } else {
