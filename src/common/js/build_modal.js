@@ -110,7 +110,7 @@ module.exports = function(e, worker_data, map) {
         info_html += "<tr><td>Real Estate:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
             for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "1100"){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "11000"){
                 jobs = x.total_jobs;
             }
         }
