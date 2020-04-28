@@ -13,14 +13,10 @@ module.exports = function(map) {
             stateName: 'get-center',
             onClick: function(button, map) {
                 map.spin(true);
-                //let stat_select = document.getElementById('stat');
-                //let selfrom = document.getElementById("selfrom");
-                //let selto = document.getElementById("selto");
-                //let agegroups = document.getElementById("agegroups");
                 var jobsectors = $('#jobsectors').val();
 
                 var downloadhref = encodeURIComponent(window.location.origin + window.location.pathname + "index.html?print=yes" + "&sector=" + jobsectors);
-                console.log(downloadhref);
+
                 var link = document.createElement('a');
                 link.href = 'https://gis.dola.colorado.gov/phantom/screenshot?website=' + downloadhref + '&filename=jobsectormap&timer=10000&width=900';
                 document.body.appendChild(link);

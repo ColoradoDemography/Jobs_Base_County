@@ -53,7 +53,6 @@ module.exports = function() {
             var agepop = 0;
             for (let i = 0; i < data.length; i++) {
                 if (data[i].area_code === fips && data[i].population_year === year && data[i].sector_id !== "0") {
-                    console.log(data[i].sector);
                     agepop = agepop + parseInt(data[i].total_jobs);
                 }
             }

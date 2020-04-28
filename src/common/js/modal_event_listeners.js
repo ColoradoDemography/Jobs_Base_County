@@ -5,7 +5,7 @@ module.exports = function(cMap, e) {
 
     document.getElementById('dlthis').addEventListener('click', function() {
         let nospacename = (e.target.feature.properties.NAME).replace(/\s/g, '');
-        saveTableAsCSV('modaltable', nospacename + "_" + cMap.first_year + "_" + cMap.last_year);
+        saveTableAsCSV('modaltable', nospacename + "_" + cMap.first_year);
     }, false);
 
     document.getElementById('dlall').addEventListener('click', function() {
