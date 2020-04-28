@@ -127,7 +127,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
 
     //intialize!
     var querystring = getJsonFromUrl();
-    var titlestring = new Array();
+    //var titlestring = new Array();
     
     if ('print' in querystring && 'sector' in querystring) {
     
@@ -148,7 +148,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
         
             //Change sector codes to names
 
-            for (var j = 0; j < querystring.length; j++){console.log(querystring[j]);
+/*            for (var j = 0; j < querystring.length; j++){console.log(querystring[j]);
                 if (querystring.sector[j] == "1000"){titlestring.push("Agriculture")}
                 if (querystring.sector[j] == "2000"){titlestring.push("Mining")}
                 if (querystring.sector[j] == "3000"){titlestring.push("Utilities")}
@@ -169,10 +169,9 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
                 if (querystring.sector[j] == "13015"){titlestring.push("Accommodation & Food Services")}
                 if (querystring.sector[j] == "14000"){titlestring.push("Other Services Except Public Administration")}
                 if (querystring.sector[j] == "15000"){titlestring.push("Government")}
-            }
-            var x = titlestring.toString();    
-        console.log(titlestring[1]);
-            title_h2.innerHTML = "Sectors " + ":&nbsp;&nbsp;" + x;
+            }*/
+
+            title_h2.innerHTML = "Sectors " + ":&nbsp;&nbsp;" + querystring.sector;
                         
             refreshdata(layer, main_data);
         } else {
