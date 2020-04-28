@@ -171,7 +171,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
                 if (querystring.sector[j] == "15000"){titlestring.push("Government")}
             }
             var x = titlestring.toString();    
-        
+        console.log(titlestring[1]);
             title_h2.innerHTML = "Sectors " + ":&nbsp;&nbsp;" + x;
                         
             refreshdata(layer, main_data);
