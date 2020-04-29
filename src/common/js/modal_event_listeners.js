@@ -9,7 +9,7 @@ module.exports = function(cMap, e) {
     }, false);
 
     document.getElementById('dlall').addEventListener('click', function() {
-        window.location.href = 'https://storage.googleapis.com/co-publicdata/components-change-county.csv';
+        window.location.href = 'https://storage.googleapis.com/co-publicdata/jobs-by-sector.csv';
     }, false);
 
 

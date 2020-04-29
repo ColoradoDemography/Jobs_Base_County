@@ -17,7 +17,7 @@ module.exports = function(e, worker_data, map) {
         var jobs;
         var x;
 
-        var info_html = "<ul id='tabbedbrowsing' class='tab'><li><a href='#' id='tab_table' class='tablinks active'>Table</a></li><li><a href='#' id='tab_chart' class='tablinks'>Chart</a></li></ul><div id='tablediv' class='tabcontent' style='display: block;'>" +
+        var info_html = "<ul id='tabbedbrowsing' class='tab'><li><a href='#' id='tab_table' class='tablinks active'>Table</a></li></ul><div id='tablediv' class='tabcontent' style='display: block;'>" +
 
             "<br /><h2 style='text-align: center'>" + e.target.feature.properties.NAME + " County Jobs By Sector</h2><br /><table id='modaltable'>";
 

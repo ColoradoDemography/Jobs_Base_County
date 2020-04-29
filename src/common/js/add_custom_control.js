@@ -22,7 +22,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
     command.onAdd = function() {
         var div = L.DomUtil.create('div', 'command bord');
         div.innerHTML = 
-            "Statistic:<br /><select id='stat'><option value='3'>Total Jobs</option><option value='4'>Percent of Jobs</option></select><br />" +
+            "Statistic:<br /><select id='stat'><option value='4'>Percent of Jobs</option><option value='3'>Total Jobs</option></select><br />" +
             "Select Job Sectors:<br /><select multiple size='20' id='jobsectors'>" +
                 "<option value='1000' selected>Agriculture</option>" + 
                 "<option value='2000'>Mining</option>" +
