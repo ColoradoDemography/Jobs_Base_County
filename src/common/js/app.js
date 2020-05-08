@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }).addTo(map);
 
     require("./add_save_button.js")(map);
-    //require("./add_info_button.js")(map);
+    require("./add_info_button.js")(map);
 
 
     require("./add_layer_control.js")(map, basemaps);
