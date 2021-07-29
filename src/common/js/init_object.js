@@ -20,7 +20,7 @@ module.exports = function() {
         this.alldata = this.data;
 
         var first_year = function() {
-            var low_year_value = 2019;
+            var low_year_value = 2020;
             for (let i = 0; i < data.length; i++) {
                 if (data[i].population_year < low_year_value) {
                     low_year_value = data[i].population_year;
