@@ -5,7 +5,7 @@ module.exports = function(map) {
     
 
     //var infoPopup = L.popup().setContent('Map Info');
-    var info_html = "<h2 style='text-align: center'> County Jobs By Sector</h2>"+
+    var info_html = "<h2 style='text-align: center'> County Base Jobs</h2>"+
     "<p>Total Employment by Industry and the Industry share of county total employment use the <a href='https://demography.dola.colorado.gov/economy-labor-force/data/jobs-by-sector/'>State Demography Office’s Total Estimated Jobs Series</a>. The 2018 annual employment estimate used in this series is comprised of roughly 2.9 million wage &amp; salary workers and 500,000 proprietors. The total number of estimated jobs in Colorado is larger than the labor force in the state due to roughly 7% of the workforce holding multiple jobs and workers from out of state who commute to Colorado for work.</p>"
     
     

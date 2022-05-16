@@ -9,7 +9,7 @@ module.exports = function(map: Object) {
     });
     title.onAdd = function() {
         var div = L.DomUtil.create('div', 'title bord');
-        div.innerHTML = '<h2>Estimated Job Sectors - 2020</h2>';
+        div.innerHTML = '<h2>Estimated Base Jobs - 2020</h2>';
         return div;
     };
     title.addTo(map);

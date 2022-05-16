@@ -58,7 +58,7 @@ module.exports = function(map: Object, worker_data: Object, resolve: any) {
 
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', "data/counties.geojson");
+    xhr.open('GET', "data/countybase.geojson");
     xhr.send(null);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {

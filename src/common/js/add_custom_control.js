@@ -24,26 +24,36 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
         div.innerHTML = 
             "Statistic:<br /><select id='stat'><option value='4'>Percent of Jobs</option><option value='3'>Total Jobs</option></select><br />" +
             "Select Job Sectors:<br /><select multiple size='20' id='jobsectors'>" +
-                "<option value='1000' selected title='Establishments engaged in growing crops, raising animals, harvesting timber'>Agriculture</option>" + 
-                "<option value='2000' title='Establishments that extract naturally occurring mineral solids (i.e. coal and ores),  liquid minerals(i.e.crude petroleum) and gases'>Mining</option>" +
-                "<option value='3000' title='Establishments engaged in the provision of the following utility services: electric power, natural gas, steam, water supply & sewage removal'>Utilities</option>" +
-                "<option value='4000' title='Establishments primarily engaged in the construction of buildings or engineering projects'>Construction</option>" +
-                "<option value='5000' title='Establishments engaged in the mechanical, physical, or chemical transformation of materials, substances, or components into new products'>Manufacturing</option>" +
-                "<option value='6000' title='Establishments engaged in wholesaling merchandise, generally without transformation, and rendering services incidental to the sale of merchandise'>Wholesale Trade</option>" +
-                "<option value='7000' title='Establishments engaged in retailing merchandise and rendering services incidental to the sale of merchandise'>Retail Trade</option>" +
-                "<option value='8000' title='Establishments  providing transportation of passengers and cargo, warehousing and storage for goods, scenic and sightseeing transportation, and support activities related to modes of transportation'>Transportation & Warehousing</option>" +
-                "<option value='9000' title='Establishments engaged in producing & distributing information & cultural products, transmit or distribute communications, & processing data'>Information</option>" +
-                "<option value='10000' title='Establishments primarily engaged in financial transactions and/or in facilitating financial transactions'>Finance Activities</option>" +
-                "<option value='10150' title='Establishments primarily engaged in renting, leasing, or selling tangible or intangible assets, and establishments providing related services'>Real Estate</option>" +
-                "<option value='11000' title='Establishments that specialize in performing professional, scientific, and technical activities for others'>Professional & Business Services</option>" +
-                "<option value='11025' title='Establishments in the private sector that administer, oversee, and manage establishments of the company or enterprise'>Management of Companies</option>" +
-                "<option value='11050' title='Establishments performing routine support activities for the day-to-day operations of other organizations'>Admin & Waste Management</option>" +
-                "<option value='12000' title='Establishments that provide instruction and training in a wide variety of subjects (i.e. schools, colleges, and training centers)'>Education</option>" +
-                "<option value='12015' title='Establishments providing health care and social assistance for individuals'>Health Services</option>" +
-                "<option value='13000' title='Establishments that operate facilities or provide services to meet varied cultural, entertainment & recreational opportunities'>Arts</option>" +
-                "<option value='13015' title='Establishments providing customers with lodging and/or preparing meals, snacks & beverages for immediate consumption'>Accommodation & Food Services</option>" +
-                "<option value='14000' title='Establishments engaged in repairing & maintenance, personal services or religious / social activities'>Other Services Except Public Administration</option>" +
-                "<option value='15000' title='Establishments of federal, state, and local government agencies (includes k-12, higher education and some hosptials)'>Government</option>" +
+                //"<option value='1000' selected title='Establishments engaged in growing crops, raising animals, harvesting timber'>Ag Inputs</option>" + 
+                //"<option value='2000' title='Establishments that extract naturally occurring mineral solids (i.e. coal and ores),  liquid minerals(i.e.crude petroleum) and gases'>Ag Processing</option>" +
+                //"<option value='3000' title='Establishments engaged in the provision of the following utility services: electric power, natural gas, steam, water supply & sewage removal'>Ag Proc Trade</option>" +
+                //"<option value='4000' title='Establishments primarily engaged in the construction of buildings or engineering projects'>Ag Prod</option>" +
+                "<option value='5000'>Agriculture</option>" +
+                "<option value='6000'>Commuter</option>" +
+                //"<option value='7000' title='Establishments engaged in retailing merchandise and rendering services incidental to the sale of merchandise'>Direct Basic</option>" +
+                "<option value='8000'>Government</option>" +
+                //"<option value='9000' title='Establishments engaged in producing & distributing information & cultural products, transmit or distribute communications, & processing data'>IB</option>" +
+                "<option value='10000'>Manufacturing</option>" +
+                "<option value='11000'>Mining</option>" +
+                //"<option value='12000' title='Establishments that provide instruction and training in a wide variety of subjects (i.e. schools, colleges, and training centers)'>Natl Business</option>" +
+                //"<option value='13000' title='Establishments that operate facilities or provide services to meet varied cultural, entertainment & recreational opportunities'>Natl Comm</option>" +
+                //"<option value='14000' title='Establishments primarily engaged in the construction of buildings or engineering projects'>Natl Const</option>" +
+                //"<option value='15000' title='Establishments engaged in the mechanical, physical, or chemical transformation of materials, substances, or components into new products'>Natl Ed</option>" +
+                //"<option value='16000' title='Establishments engaged in wholesaling merchandise, generally without transformation, and rendering services incidental to the sale of merchandise'>Natl Fire</option>" +
+                //"<option value='17000' title='Establishments engaged in retailing merchandise and rendering services incidental to the sale of merchandise'>Natl Trade</option>" +
+                "<option value='18000'>Transfer Payments</option>" +
+                "<option value='19000'>Other Household Income</option>" +
+                "<option value='20000'>Regional Service</option>" +
+                //"<option value='21000' title='Establishments that specialize in performing professional, scientific, and technical activities for others'>Resorts</option>" +
+                "<option value='22000'>Retiree</option>" +
+                //"<option value='23000' title='Establishments that operate facilities or provide services to meet varied cultural, entertainment & recreational opportunities'>Second Home</option>" +
+                //"<option value='24000' title='Establishments primarily engaged in the construction of buildings or engineering projects'>Total Basic</option>" +
+                //"<option value='25000' title='Establishments engaged in the mechanical, physical, or chemical transformation of materials, substances, or components into new products'>Total LRS</option>" +
+                //"<option value='26000' title='Establishments engaged in wholesaling merchandise, generally without transformation, and rendering services incidental to the sale of merchandise'>Tour Serv</option>" +
+                "<option value='27000'>Tourism</option>" +
+                //"<option value='28000' title='Establishments  providing transportation of passengers and cargo, warehousing and storage for goods, scenic and sightseeing transportation, and support activities related to modes of transportation'>Transportation</option>" +
+                //"<option value='29000' title='Establishments engaged in producing & distributing information & cultural products, transmit or distribute communications, & processing data'>Worker LRS</option>" +
+                
             "</select>";
             //"<br /><button name='display' id='display' align='center'>Show Data</button>";
             

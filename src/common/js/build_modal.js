@@ -33,145 +33,145 @@ module.exports = function(e, worker_data, map) {
         info_html += "<tr><td>Total Jobs:</td><td style='text-align: right'>" + parseInt(total_jobs) + "</td><td style'text-align: right'>" + "</td><td></td></tr>";
         
         for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "1000"){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "5000"){
                 jobs = x.total_jobs;
             }
         }
-        info_html += "<tr><td>Agriculture:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+        info_html += "<tr><td>Agribusiness:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
         for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "2000"){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "11000"){
                 jobs = x.total_jobs;
             }
         }
         info_html += "<tr><td>Mining:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
             for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "3000"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Utilities:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-        for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "4000"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Construction:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-        for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "5000"){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "10000"){
                 jobs = x.total_jobs;
             }
         }
         info_html += "<tr><td>Manufacturing:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
         for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "8000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Government:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "20000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Regional Center/National Services - All:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "14000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Regional Center/National Services-Construction:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "13000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Regional Center/National Services-Communications:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "17000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Regional Center/National Services-Trade & Transportation:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "12000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Regional Center/National Services-Professional & Business Services:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "16000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Regional Center/National Services-Finance, Insurance & Real Estate:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "15000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Regional Center/National Services-Education & Health Services:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "27000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Tourism:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
             if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "6000"){
                 jobs = x.total_jobs;
             }
         }
-        info_html += "<tr><td>Wholesale Trade:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+        info_html += "<tr><td>Household-Commuters:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "22000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Household-Retirees:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "18000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Households - with Public Assistance Income (excluding retirees):</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+    
+        for (x of worker_data){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "19000"){
+                jobs = x.total_jobs;
+            }
+        }
+        info_html += "<tr><td>Households - with Dividends, Interest, and Rental Income (excluding retirees):</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
         for (x of worker_data){
             if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "7000"){
                 jobs = x.total_jobs;
             }
         }
-        info_html += "<tr><td>Retail Trade:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+        info_html += "<tr><td>Total Direct Basic:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
         for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "8000"){
+            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "29000"){
                 jobs = x.total_jobs;
             }
         }
-        info_html += "<tr><td>Transportation & Warehousing:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+        info_html += "<tr><td>Worker Local Res. Services (Non Basic):</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
         for (x of worker_data){
             if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "9000"){
                 jobs = x.total_jobs;
             }
         }
-        info_html += "<tr><td>Information:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
+        info_html += "<tr><td>Indirect Basic:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
     
-        for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "10000"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Finance Activities:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "10150"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Real Estate:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "11000"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Professional & Business Services:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "11025"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Management of Companies:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "11050"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Admin & Waste Management:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "12000"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Education:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "12015"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Health Services:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "13000"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Arts:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "13015"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Accommodation & Food Services:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
-            if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "14000"){
-                jobs = x.total_jobs;
-            }
-        }
-        info_html += "<tr><td>Other Services Except Public Administration:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-    
-            for (x of worker_data){
+        /* for (x of worker_data){
             if (e.target.feature.properties.COUNTYFP == x.area_code && x.sector_id == "15000"){
                 jobs = x.total_jobs;
             }
         }
         info_html += "<tr><td>Government:</td><td style='text-align: right'>" + parseInt(jobs) + "</td><td style'text-align: right'>" + (parseInt(jobs)/parseInt(total_jobs)*100).toFixed(2) + "%</td></tr>";
-        
+         */
         info_html += "</table><br /><div class='main_content'><div class='container'><button class='mbutton' id='dlthis'>Download Table</button><button class='mbutton' id='dlall' style='float: right;'>Download All Data</button></div></div><br /></div>" +
 
             "<div id='chartdiv' class='tabcontent'>" +
