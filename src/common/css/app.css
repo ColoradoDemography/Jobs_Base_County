@@ -175,6 +175,14 @@ li.ui-tabs-active a {
     font-size: 12px;
 }
 
+.title2 {
+    border-radius: 6px;
+    background: white;
+    border: 1px solid rgb(221, 221, 221);
+    color: rgb(20, 20, 20);
+    font-size: 10px;
+}
+
 .spanindent {
     margin: 20px;
     color: #999;

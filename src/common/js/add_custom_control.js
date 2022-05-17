@@ -23,7 +23,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
         var div = L.DomUtil.create('div', 'command bord');
         div.innerHTML = 
             "Statistic:<br /><select id='stat'><option value='4'>Percent of Jobs</option><option value='3'>Total Jobs</option></select><br />" +
-            "Select Job Sectors:<br /><select multiple size='20' id='jobsectors'>" +
+            "Select Job Sectors:<br /><select multiple size='10' id='jobsectors'>" +
                 //"<option value='1000' selected title='Establishments engaged in growing crops, raising animals, harvesting timber'>Ag Inputs</option>" + 
                 //"<option value='2000' title='Establishments that extract naturally occurring mineral solids (i.e. coal and ores),  liquid minerals(i.e.crude petroleum) and gases'>Ag Processing</option>" +
                 //"<option value='3000' title='Establishments engaged in the provision of the following utility services: electric power, natural gas, steam, water supply & sewage removal'>Ag Proc Trade</option>" +
