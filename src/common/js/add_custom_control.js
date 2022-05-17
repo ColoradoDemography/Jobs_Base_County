@@ -28,7 +28,7 @@ module.exports = function(map: Object, layer: Object, worker_data: any) {
                 //"<option value='2000' title='Establishments that extract naturally occurring mineral solids (i.e. coal and ores),  liquid minerals(i.e.crude petroleum) and gases'>Ag Processing</option>" +
                 //"<option value='3000' title='Establishments engaged in the provision of the following utility services: electric power, natural gas, steam, water supply & sewage removal'>Ag Proc Trade</option>" +
                 //"<option value='4000' title='Establishments primarily engaged in the construction of buildings or engineering projects'>Ag Prod</option>" +
-                "<option value='5000'>Agriculture</option>" +
+                "<option value='5000' selected >Agriculture</option>" +
                 "<option value='6000'>Commuter</option>" +
                 //"<option value='7000' title='Establishments engaged in retailing merchandise and rendering services incidental to the sale of merchandise'>Direct Basic</option>" +
                 "<option value='8000'>Government</option>" +
