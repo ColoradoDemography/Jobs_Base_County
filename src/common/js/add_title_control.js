@@ -9,7 +9,7 @@ module.exports = function(map: Object) {
     });
     title.onAdd = function() {
         var div = L.DomUtil.create('div', 'title bord');
-        div.innerHTML = '<h2>Estimated Economic Base Industry Jobs - 2020</h2>';
+        div.innerHTML = '<h2>Estimated Economic Base Industry Jobs - 2021</h2>';
         return div;
     };
     title.addTo(map);

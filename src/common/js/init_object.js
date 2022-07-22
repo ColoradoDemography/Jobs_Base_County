@@ -20,7 +20,7 @@ module.exports = function() {
         this.alldata = this.data;
 
         var first_year = function() {
-            var low_year_value = 2020;
+            var low_year_value = 2021;
             for (let i = 0; i < data.length; i++) {
                 if (data[i].population_year < low_year_value) {
                     low_year_value = data[i].population_year;
@@ -31,7 +31,7 @@ module.exports = function() {
         this.first_year = first_year;
 
         var last_year = function() {
-            var high_year_value = 2020;
+            var high_year_value = 2021;
             for (let i = 0; i < data.length; i++) {
                 if (data[i].population_year > high_year_value) {
                     high_year_value = data[i].population_year;
